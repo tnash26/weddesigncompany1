@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewpoint" content="width=device-width">
+    <meta name="description" content="Affordable and professional web design">
+    <meta name="keyword" content="web design, affordable web design, professional web design">
+    <meta name="author" content="Tinashe Munyanyiwa">
+    <title>Tech nash | Services </title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1> <span class="highlight">Tech Nash </span> Web Design</h1>
+            </div>
+
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li class="current"><a href="services.html">Services</a></li>
+                </ul>
+            </nav>
+            
+
+        </div>
+        
+    </header>
+    
+
+    <section id="newsletter">
+        <div class="container">
+            <h1>Subscribe To Our Newsletter</h1>
+            <form>
+                <input type="email" placeholder="Enter Email...">
+                <button type="submit" class="button_1">Subscribe</button>
+            </form>
+        </div>
+    </section>
+    <section id="main">
+        <div class="container">
+            <article id="main-col">
+                <h1 class="page-title">Services</h1>
+                <ul id="services">
+                    <li>
+                        <h3>Web Site Design</h3>
+                        <p>63% of consumers primarily use your company’s website to find and engage with you. As if that’s not enough, 48% of
+                        people cited a website’s design as the number one factor in deciding the credibility of a business. What does your
+                        website say about your business?
+                        </p>
+                        <p>Pricing: $50 USD - $150 USD</p>
+                    </li>
+                    <li>
+                        <h3>Web Site Maintenance and SEO</h3>
+                        <p>
+                            Keeping a website well maintained and attractive is important to companies big and small in order to engage and retain
+                            customers. It’s easy for businesses, especially startups, to cut corners and let a few tasks slide. Website maintenance
+                            can easily become one of those things as it doesn’t always present immediate issues. However, just like your health can
+                            fall apart if you go too long without a regular check up, so can the health of your website.
+                            Regular monitoring of your website is a must for keeping your business running smoothly.
+                        </p>
+                        <p>
+                            97% of online experiences begin with a search engine, but 41% of clicks go to the top three paid ads on the search
+                            results page. Pay per click is a great way to drive more (qualified) visitors to your website and get more leads and
+                            sales—FAST! The best part? There’s no waiting period.
+                        </p>
+                        <p>Want to get more earned traffic, leads, and sales? Start where 93% of online experiences start—with search engines. Grow
+                           your long-term authority and get more qualified website traffic, leads, and sales with search engine optimization (SEO).
+                        </p>
+                        <p>Pricing: $50 USD per month</p>
+                    </li>
+                    <li>
+                        <h3>Web Site Hosting</h3>
+                        <p>Web (or Shared) Hosting is the most budget-friendly type of hosting. Since you're sharing resources — like neighbors in
+                           an apartment building — you spend less but have fewer options and less control.
+                        </p>
+                        <p>
+                            Virtual Private Servers (VPS) and Business Hosting dedicate specific portions of a web server’s capacity and processing
+                            to each customer. Like a condo, your space (on the server) is yours.
+                        </p>
+                        <p>
+                            Dedicated Server Hosting — the mansion of hosting analogies — offers unlimited resources at a premium price. You can
+                            choose between full root access or managed plans. It’s all up to you.
+                        </p>
+                        <p>Pricing: $5 - $15 USD per month</p>
+                    </li>
+
+                </ul>
+            </article>
+            <aside id="sidebar">
+               <!-- <div class="dark"> -->
+                <div class="wrapper">
+                    <h3 class="quote">Get A Quote</h3>
+                    <div id="error_message"></div>
+                   <form name="frmContact" id="" frmContact"" method="post"
+            action="" enctype="multipart/form-data"
+            onsubmit="return validateContactForm()">
+
+            <div class="input-row">
+                <label style="padding-top: 20px;">Name</label> <span
+                    id="userName-info" class="info"></span><br /> <input
+                    type="text" class="input-field" name="userName"
+                    id="userName" />
+            </div>
+            <div class="input-row">
+                <label>Email</label> <span id="userEmail-info"
+                    class="info"></span><br /> <input type="text"
+                    class="input-field" name="userEmail" id="userEmail" />
+            </div>
+            <div class="input-row">
+                <label>Subject</label> <span id="subject-info"
+                    class="info"></span><br /> <input type="text"
+                    class="input-field" name="subject" id="subject" />
+            </div>
+            <div class="input-row">
+                <label>Message</label> <span id="userMessage-info"
+                    class="info"></span><br />
+                <textarea name="content" id="content"
+                    class="input-field" cols="60" rows="6"></textarea>
+            </div>
+            <div>
+                <input type="submit" name="send" class="btn-submit"
+                    value="Send" />
+
+                <div id="statusMessage"> 
+                        <?php
+                        if (! empty($message)) {
+                            ?>
+                            <p class='<?php echo $type; ?>Message'><?php echo $message; ?></p>
+                        <?php
+                        }
+                        ?>
+                    </div>
+            </div>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"
+        type="text/javascript"></script>
+    <script type="text/javascript">
+        function validateContactForm() {
+            var valid = true;
+
+            $(".info").html("");
+            $(".input-field").css('border', '#e0dfdf 1px solid');
+            var userName = $("#userName").val();
+            var userEmail = $("#userEmail").val();
+            var subject = $("#subject").val();
+            var content = $("#content").val();
+            
+            if (userName == "") {
+                $("#userName-info").html("Required.");
+                $("#userName").css('border', '#e66262 1px solid');
+                valid = false;
+            }
+            if (userEmail == "") {
+                $("#userEmail-info").html("Required.");
+                $("#userEmail").css('border', '#e66262 1px solid');
+                valid = false;
+            }
+            if (!userEmail.match(/^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/))
+            {
+                $("#userEmail-info").html("Invalid Email Address.");
+                $("#userEmail").css('border', '#e66262 1px solid');
+                valid = false;
+            }
+
+            if (subject == "") {
+                $("#subject-info").html("Required.");
+                $("#subject").css('border', '#e66262 1px solid');
+                valid = false;
+            }
+            if (content == "") {
+                $("#userMessage-info").html("Required.");
+                $("#content").css('border', '#e66262 1px solid');
+                valid = false;
+            }
+            return valid;
+        }
+</script>
+</body>
+</html>
+                    
+                </div>
+
+            </aside>
+
+        </div>
+    </section>
+    <footer>
+        <p>Tech Nash Web Design, Copyright &copy; 2020 </p>
+    </footer>
+<script src="scripts.js"></script>
+
+</body>
+
+
+</html>
